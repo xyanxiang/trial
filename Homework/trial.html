@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Accenture</title>
+  <style>
+    #controller {
+      position: relative;
+    }
+
+    #controller li {
+      position: absolute;
+      list-style: none;
+      display: block;
+      height: 70px;
+      width: 136px;
+    }
+
+    #controller a {
+      display: block;
+      text-indent: -999px;
+      height: 70px;
+    }
+
+    #first {
+      left: 0px;
+    }
+
+    #prev {
+      left: 146px;
+    }
+
+    #next {
+      left: 292px;
+    }
+
+    #last {
+      left: 438px;
+    }
+
+    #first a {
+      background-image: url("images/Img/firston.png");
+    }
+
+    #firsr a:hover {
+      background-image: url("images/Img/firstoff.png");
+    }
+
+    #prev a {
+      background-image: url("images/Img/prevon.png");
+    }
+
+    #prev a:hover {
+      background-image: url("images/Img/prevoff.png");
+    }
+
+    #next a {
+      background-image: url("images/Img/nexton.png");
+    }
+
+    #next a:hover {
+      background-image: url("images/Img/nextoff.png");
+    }
+
+    #last a {
+      background-image: url("images/Img/lastoff.png");
+    }
+
+    #last a:hover {
+      background-image: url("images/Img/laston.png");
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Slide Show Controls</h1>
+  <ul id="controller">
+    <li id="first"><a href="#">First</a></li>
+    <li id="prev"><a href="#">Previous</a></li>
+    <li id="next"><a href="#">Next</a></li>
+    <li id="last"><a href="#">Last</a></li>
+  </ul>
+  <script src="trial4.js"></script>
+</body>
+
+</html>
