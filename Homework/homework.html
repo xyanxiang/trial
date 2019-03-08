@@ -54,15 +54,21 @@
                             <input type="text" placeholder="我正在寻找" name="inputArea" id="inputArea">
                             <button type="submit" name="searchForInput">搜索</button>
                         </p>
+                        <p>
+                            <h1>Function call information</h1>
+                            <div id="placeHolder"></div>
+                        </p>
 
                     </form>
-                    <form action="" id="selectForm" name="selectForm">
+
+                    <h1>Variable Scope Trials</h1>
+                    <form id="theForm" action="calc-factorial.php" method="get">
                         <p>
-                            <label for="entry">Enter one or more words to be Initial Capped:</label>
-                        </p>
-                        <p>
-                            <input type="text" id="entry" name="entry" value="">
-                            <input type="button" id="do-it" value="Initial Caps">
+                            <label for="visitorInput">Enter an input value:</label>
+                            <input type="text" id="input" name="input" value="0">
+                            <input type="submit" value="Calc Factorial">
+                            <label for="output">Results:</label>
+                            <input type="text" id="output" value="">
                         </p>
                     </form>
                 </div>

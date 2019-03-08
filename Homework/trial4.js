@@ -1,55 +1,70 @@
-// initialize the page when loading finished;
 
-window.onload = initialize;
+// window.addEventListener('load',initialize);
 
-function initialize(){
-  if(document.getElementById){
-    var oEntry = document.getElementById("entry");
-    var oButton = document.getElementById("do-it");
-    if(oEntry&&oButton){
-      oButton.addEventListener("click",doIt);
-    }
-  }
+// function initialize(){
+//  if(document.getElementById){
+//    document.getElementById("theForm").addEventListener('submit',calcFactorial);
+//  }
+// }
+
+// function calcFactorial(evt){
+//   if(!evt){
+//     evt = window.event;
+//   }
+
+//   var oInput = document.getElementById("input");
+//   var oOutput = document.getElementById("output");
+
+//   if(oInput && oOutput){
+//     oOutput.value = factorial(oInpput.value);
+//   }
+
+//   if(evt.preventDefault) evt.preventDefault();
+//   return false;
+// }
+
+// function factorial(n){
+//   if(n>0){
+//     return n*(factorial(n-1));
+//   } else{
+//     return 1;
+//   }
+// }
+
+// function countMe() {
+//   var count = 1;
+//   var showCount = function () { alert(count) };
+//   count++;
+//   return showCount;
+// }
+
+// var countamatic = countMe();
+// document.getElementById('searchForInput').onclick = countamatic();
+
+// function wakeupCaller(name,roomnum){
+//   return function(){
+//     alert("Call " + name + " in room #" + roomnum + ".")
+//   }
+// }
+
+// var wakeWilson = wakeupCaller("Mr.Wilson",515);
+
+// setTimeout(wakeWilson,6000);
+
+var  myAlien = new Alien();
+
+// function Alien(){
+//   this.name = "Clyde";
+//   this.aggressive = true;
+// }
+function Alien(name,aggressive){
+  this.name = name;
+  this.aggressive = aggressive;
 }
 
-function doIt(){
-  var oEntry = document.getElementById('entry');
-  oEntry.value = oEntry.value.initialCaps();
-}
+var alien1 = new Alien("James",false);
+var alien2 = new Alien("Wheels",true);
 
-String.prototype.initialCaps = function(){
-  var sText = this.toString();
-  console.log(sText);
-
-  var aWords = sText.split('');
-  console.log(aWords);
-  var sInitial = aWords[0].charAt(0);
-    var sReminder = aWords[0].substr(1);
-    aWords[i] = sInitial.toUpperCase() + sReminder.toLowerCase();
-  // for(var i = 0; i<aWords.length;i++){
-  //   var sInitial = aWords[i].charAt(0);
-  //   var sReminder = aWords[i].substr(1);
-  //   aWords[i] = sInitial.toUpperCase() + sReminder.toLowerCase();
-  // } 
- return aWords.join(' ');
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(alien1.home);
 
 
