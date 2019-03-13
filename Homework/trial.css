@@ -1,0 +1,7 @@
+
+#planetPhoto,#planetsList,#submitButton:hover{
+ cursor:pointer;
+}
+#planetsList.option::after{
+  cursor:pointer;
+}
