@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>X and Y Event Properties (NN6+/Moz)</title>
+</head>
+
+<body>
+  <h1>X and Y Event Properties (NN6+/Moz)</h1>
+  <hr />
+  <p>Click on the button and in the DIV/image to see the coordinate values
+    for the event object.
+  </p>
+  <form name="output">
+    <table>
+      <tr>
+        <td colspan="2">NN6 Mouse Event Coordinates:</td>
+      </tr>
+      <tr>
+        <td align="right">target:</td>
+        <td colspan="3"><input type="text" name="srcElemTag" <td size="25" /></td>
+      </tr>
+      <tr>
+        <td align="right">clientX, clientY:</td>
+        <td><input type="text" name="clientCoords" size="10" /></td>
+        <td align="right">...With scrolling:</td>
+        <td><input type="text" name="clientScrollCoords" size="10" /></td>
+      </tr>
+      <tr>
+        <td align="right">layerX, layerY:</td>
+        <td><input type="text" name="layerCoords" size="10" /></td>
+      </tr>
+      <tr>
+        <td align="right">pageX, pageY:</td>
+        <td><input type="text" name="pageCoords" size="10" /></td>
+        <td aligh="right">Within Element:</td>
+        <td><input type="text" name="inElemCoords" size="10" /></td>
+      </tr>
+      <tr>
+        <td align="right">screenX, screenY:</td>
+        <td><input type="text" name="screenCoords" size="10" /></td>
+      </tr>
+      <tr>
+        <td align="right"><input type="button" value="Click Here" /></td>
+      </tr>
+    </table>
+  </form>
+  <div id="display" style="position:relative; left:100">
+    <img alt="image" src="./images/images/nexton.gif" width="320" height="240" border="0" />
+  </div>
+  <script src="trial11.js"></script>
+</body>
+
+</html>

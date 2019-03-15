@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>fromElement and toElement Properties</title>
+  <style type="text/css">
+    .direction {
+      background-color: #00FFFF;
+      width: 100;
+      height: 50;
+      text-align: center;
+    }
+
+    #main {
+      background-color: #FF6666;
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript">
+    function showArrival(evt) {
+      evt = (evt) ? evt : ((event) ? event : null);
+      var direction = (event.fromElement.innerText) ?
+        event.fromElement.innerText :
+        "parts unknown";
+      status = "Arrived from: " + direction;
+     console.log(status);
+    }
+    function showDeparture(evt) {
+      evt = (evt) ? evt : ((event) ? event : null);
+      var direction = (event.toElement.innerText) ?
+        event.toElement.innerText :
+        "parts unknown";
+      status = "Departed to: " + direction;
+      console.log(status);
+    }
+    // bind the event handlers
+    function addEvent(elem, evtType, func) {
+      if (elem.addEventListener) {
+        elem.addEventListener(evtType, func, false);
+      }
+      else if (elem.attachEvent) {
+        elem.attachEvent("on" + evtType, func);
+      }
+      else {
+        elem["on" + evtType] = func;
+      }
+    }
+    addEvent(window, "load", function () {
+      addEvent(document.getElementById("main"), "mouseover",
+        function (evt) { showArrival(evt); });
+      addEvent(document.getElementById("main"), "mouseout",
+        function (evt) { showDeparture(evt); });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>fromElement and toElement Properties</h1>
+  <hr />
+  <p>Roll the mouse to the center box and look for arrival information in
+    the status bar. Roll the mouse away from the center box and look for
+    departure information in the status bar.</p>
+  <table cellspacing="0" cellpadding="5">
+    <tr>
+      <td></td>
+      <td class="direction">North</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="direction">West</td>
+      <td id="main" onmouseover="showArrival()" onmouseout="showDeparture()">Roll</td>
+      <td class="direction">East</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="direction">South</td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+
+</html>

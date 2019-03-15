@@ -9,7 +9,7 @@
 <body>
   <h1>Button and Key Properties</h1>
   <hr />
-  <form>
+  <form id="newForm" name="newForm">
     <p>Mouse down atop this
       <input id="button" type="button" value="Button" />
       with either mouse button (if you have more than one).
@@ -17,9 +17,22 @@
     <p>Enter some text with uppercase and lowercase letters:
       <textarea id="text" cols="40" rows="4" wrap="virtual"></textarea>
     </p>
-    <p><input type="text" name="errorButton" id="errorButton" value="TryErrorEvent">
+    <p><input type="text" name="errorButton" id="errorButton" placeholder="TryKeyEvent">
+    </p>
+    <p>
+      <button id="resetButton" name="resetButton">reset the form</button>
     </p>
   </form>
+  <p>请试着滚动 DIV 中的文本：</p>
+  <div id="textContainer">
+  <div name="textBox" id="textBox" type="text" style="width:200px;height:100px;overflow:scroll;">text. text. text. text. text. text. text. text. text. text.
+    text. text. text. text. text. text. text. text. text. text. text. text.
+    <br /><br />
+    text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text.
+    text. text. text. text. text. text. text. text. text. text. text. text. text. text.</div>
+  </div>
+  <p>滚动了 <span id="spanBox">0</span> 次。</p>
+  <div id="pillarBox" style="height:1000px;width:1200px;"></div>
   <script src="trial5.js"></script>
 </body>
 

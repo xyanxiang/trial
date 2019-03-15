@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>charCode and keyCode Properties</title>
+  <style type="text/css">
+    td {
+      text-align: center
+    }
+  </style>
+</head>
+<body>
+  <h1>charCode and keyCode Properties</h1>
+  <hr />
+  <form>
+    <p>
+      <textarea id="scratchpad" name="scratchpad" cols="40" rows="5" wrap="hard"></textarea>
+    </p>
+    <table cellpadding="5">
+      <tr>
+        <th>Event</th>
+        <th>event.charCode</th>
+        <th>event.keyCode</th>
+      </tr>
+      <tr>
+        <td>onKeyDown:</td>
+        <td><input type="text" name="downChar" size="3" /></td>
+        <td><input type="text" name="downKey" size="3" /></td>
+      </tr>
+      <tr>
+        <td>onKeyPress:</td>
+        <td><input type="text" name="pressChar" size="3" /></td>
+        <td><input type="text" name="pressKey" size="3" /></td>
+      </tr>
+      <tr>
+        <td>onKeyUp:</td>
+        <td><input type="text" name="upChar" size="3" /></td>
+        <td><input type="text" name="upKey" size="3" /></td>
+      </tr>
+    </table>
+  </form>
+  <script src="trial10.js"></script>
+</body>
+
+</html>
