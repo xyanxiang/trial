@@ -14,8 +14,6 @@ function processEvent(evt) {
 // reveal event phase of current event object
 function getPhase(evt) {
 
-
-
   switch (evt.eventPhase) {
     case 1:
       return "CAPTURING";
@@ -25,8 +23,7 @@ function getPhase(evt) {
       break;
     case 3:
       return "BUBBLING";
-      break;
-    default:
+      break;sdefault:
       return "";
   }
 }
@@ -54,4 +51,22 @@ addEvent(window, "load", function () {
   // turn on event capture for the button
   document.getElementById("main1").addEventListener("click",
     processEvent, true);
+  // document.getElementById("textInput").addEventListener("keydown",checkIt,false);
+
 });
+
+// function checkIt(evt){
+// evt = (evt)?evt:((window.event)?window.event:null);
+// var charCode = evt.charCode;
+// if(charCode<48||charCode>57){
+//   alert("please make sure entries are numbers only");
+//   evt.preventDefault();
+// }
+// }
+function pressKey(elem,evt){
+var charCode = evt.charCode;
+if(charCode<48||charCode>57){
+  alert("please make sure entries are numbers only");
+  evt.preventDefault();
+}
+}

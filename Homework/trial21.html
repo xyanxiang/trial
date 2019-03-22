@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>canHaveChildren Property</title>
+  <link rel="stylesheet" href="./trial21.css">
+</head>
+
+<body>
+  <h1>canHaveChildren Property Lab</h1>
+  <hr />
+  <form name="input">
+    <input type="button" value="Color All Elements" name="colorAllButton" id="colorAllButton" />
+    <br />
+    <input type="button" value="Reset" name="resetButton" id="resetButton" />
+    <br />
+    <input type="button" value="Color Only Elements That Can Have Children" name="colorChildButton" id="colorChildButton" />
+  </form>
+  <br />
+  <hr />
+  <form name="output">
+    <input type="checkbox" checked="checked" />Your basic checkbox
+    <input type="text" name="access2" value="Some textbox text." />
+  </form>
+  <table id="myTable" cellpadding="10" border="2">
+    <tr>
+      <th>Quantity</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tbody>
+      <tr>
+        <td width="100">4</td>
+        <td>Primary Widget</td>
+        <td>$14.96</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Secondary Widget</td>
+        <td>$114.96</td>
+      </tr>
+    </tbody>
+  </table>
+  <h1>className Property Lab</h1>
+  <hr />
+  <form name="Input">
+    <input type="button" value="Toggle Class Name" name="InputButton" />
+  </form>
+  <br />
+  <h1 id="head1">ARTICLE I</h1>
+  <p>Congress shall make no law respecting an establishment of religion, or
+    prohibiting the free exercise thereof; or abridging the freedom of
+    speech, or of the press; or the right of the people peaceably to
+    assemble, and to petition the government for a redress of grievances.
+  </p>
+  <h1>ARTICLE II</h1>
+  <p>A well regulated militia, being necessary to the security of a free
+    state, the right of the people to keep and bear arms, shall not be
+    infringed.
+  </p>
+  <button name="showButton" id="showButton">Position and Show Logo Art</button>
+  <div id="myDIV" style="width:200px; height:200px">
+    <p>Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+      adminim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat. Duis aute irure dolor in
+      reprehenderit involuptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident.
+    </p>
+  </div>
+  <div id="logo" style="position:absolute; width:120px; visibility:hidden">
+    <img alt="image" src="./images/images/nextoff.gif" />
+  </div>
+  <div style="height:200px"></div>
+  <h1>Poetry Editor</h1>
+  <hr />
+  <p>Turn on editing to modify the following text:</p>
+  <div id="noneditableText">
+    Roses are red,
+    <br />
+    Violets are blue.
+  </div>
+  <div id="editableText">
+    Line 3,
+    <br />
+    Line 4.
+  </div>
+  <p>
+    <button id="editBtn">Enable Editing</button>
+  </p>
+  <script src="trial21.js"></script>
+</body>
+
+</html>

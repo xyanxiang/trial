@@ -10,7 +10,11 @@ function addEvent(elem,evtType,func){
 
 addEvent(window,"load",function(){
   addEvent(document.getElementById("scratchpad"),"keydown",function(evt){
-    clearEm();showCode("down",evt);
+    clearEm();
+    // if(evt.repeat){
+    //   evt.preventDefault();
+    // }
+    showCode("down",evt);
   })
   addEvent(document.getElementById("scratchpad"),"keypress",function(evt){
     showCode("press",evt);

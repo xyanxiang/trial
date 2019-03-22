@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>Dragging Event Handlers</title>
+  <style type="text/css">
+    td {
+      text-align: center;
+
+    }
+
+    th {
+      text-decoration: underline;
+    }
+
+    .blanks {
+      text-decoration: underline;
+    }
+  </style>
+ 
+</head>
+
+<body ondragstart="setupDrag()" ondrag="timeIt()">
+  <h1>Dragging Event Handlers</h1>
+  <hr />
+  <p>Your goal is to drag one noun and one adjective from the following
+    table into the blanks of the sentence. Select a word from the table
+    and drag it to the desired blank. When you release the mouse, the word
+    will appear in the blank. You have two seconds to complete each blank.
+  </p>
+  <table cellpadding="5">
+    <tr>
+      <th>Nouns</th>
+      <th>Adjectives</th>
+    </tr>
+    <tr>
+      <td class="noun">truck</td>
+      <td class="adjective">round</td>
+    </tr>
+    <tr>
+      <td class="noun">doll</td>
+      <td class="adjective">red</td>
+    </tr>
+    <tr>
+      <td class="noun">ball</td>
+      <td class="adjective">pretty</td>
+    </tr>
+  </table>
+  <p id="myP" ondragenter="cancelDefault()" ondragover="cancelDefault()" ondrop="handleDrop()">Pat said, "Oh my, the
+    <span id="blank1" class="blanks">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> is so <span id="blank2" class="blanks">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    !"
+  </p>
+  <button onclick="location.reload()">Reset</button>
+  
+  <script type="text/javascript" src="trial18.js"></script>
+</body>
+
+</html>
